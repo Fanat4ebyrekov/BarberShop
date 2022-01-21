@@ -29,6 +29,8 @@ namespace BarberShop.EF
         public string PassNum { get; set; }
         public string Phone { get; set; }
         public Nullable<int> SpecID { get; set; }
+        public string Login { get; set; }
+        public string Password { get; set; }
     
         public virtual Specialization Specialization { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

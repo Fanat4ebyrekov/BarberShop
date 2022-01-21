@@ -28,7 +28,6 @@ namespace BarberShop.EF
         }
     
         public virtual DbSet<Client> Client { get; set; }
-        public virtual DbSet<ClientService> ClientService { get; set; }
         public virtual DbSet<Employee> Employee { get; set; }
         public virtual DbSet<Gender> Gender { get; set; }
         public virtual DbSet<Order> Order { get; set; }

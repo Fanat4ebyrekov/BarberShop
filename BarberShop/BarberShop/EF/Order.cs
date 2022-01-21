@@ -19,8 +19,8 @@ namespace BarberShop.EF
         public int IDClient { get; set; }
         public int IDService { get; set; }
         public bool IsCompleted { get; set; }
-        public System.DateTime Start { get; set; }
-        public System.DateTime End { get; set; }
+        public Nullable<System.DateTime> Start { get; set; }
+        public Nullable<System.DateTime> End { get; set; }
     
         public virtual Client Client { get; set; }
         public virtual Employee Employee { get; set; }
