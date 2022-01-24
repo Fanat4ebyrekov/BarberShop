@@ -9,8 +9,23 @@
         WindowState="Maximized"
         Title="PersonalWindow" Height="1080" Width="1920">
     <Grid>
-        <StackPanel>
-            <Button
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Image Source="/Images/barber2.png" Stretch="Fill" Grid.RowSpan="3"
+            />
+        <TextBlock
+            Grid.Row="0"
+                Text="Информация о персонале"
+                FontSize="70"
+                TextAlignment="Center"
+                VerticalAlignment="Center"
+                Margin="80" 
+                Foreground="White"
+                />
+        <Button
                 x:Name="Close"
                 Height="50"
                 Width="50"
@@ -29,9 +44,32 @@
                 FontSize="70"
                 TextAlignment="Center"
                 VerticalAlignment="Center"
-                Margin="10"
+                Margin="60" Foreground="White"
                 />
-            <Button
+            <DataGrid
+            x:Name="AllPersonal"
+            Grid.Row="1"
+            AutoGenerateColumns="False"
+            
+            >
+                <DataGrid.Background>
+                    <SolidColorBrush Color="#FFF0F0F0" Opacity="0"/>
+                </DataGrid.Background>
+
+                <DataGrid.Columns >
+                    <DataGridTextColumn Header="Имя" Width="*" Binding="{Binding FName}"/>
+                    <DataGridTextColumn Header="Фамилия" Width="*" Binding="{Binding LName}"/>
+                    <DataGridTextColumn Header="Отчество" Width="*" Binding="{Binding MName}"/>
+                    <DataGridTextColumn Header="Почта" Width="*" Binding="{Binding Email}"/>
+                    <DataGridTextColumn Header="Серия паспорта" Width="*" Binding="{Binding PassSeries}"/>
+                    <DataGridTextColumn Header="Номер паспорта" Width="*" Binding="{Binding PassNum}"/>
+                    <DataGridTextColumn Header="Телефон" Width="*" Binding="{Binding Phone}"/>
+                    <DataGridTextColumn Header="Логин" Width="*" Binding="{Binding Login}"/>
+                    <DataGridTextColumn Header="Пароль" Width="0.5*" Binding="{Binding Password}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        <Button
+            Grid.Row="2"
                 x:Name="Exit"
                 Content="Выйти"
                 Height="70"
@@ -39,10 +77,10 @@
                 FontSize="35" 
                 Margin="50"
                 VerticalAlignment="Top"
-                Click="Exit_Click"
+                Click="Exit_Click" Background="{x:Null}" Foreground="White" BorderBrush="{x:Null}"
                 />
 
-        </StackPanel>
+       
         
     </Grid>
 </Window>

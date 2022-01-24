@@ -9,13 +9,16 @@
         WindowStartupLocation="CenterScreen"
         Title="AuthWindow" Height="550" Width="400">
     <Grid>
+        <Image Source="/Images\barber1.png" Stretch="Fill"
+                />
         <StackPanel>
+            
             <Button
                 x:Name="Close"
                 Height="30"
                 Width="30"
                 VerticalAlignment="Center"
-                HorizontalAlignment="Right"
+                HorizontalAlignment="Center"
                 Margin="20" Click="Close_Click" 
                 BorderBrush="{x:Null}" 
                 Foreground="{x:Null}"  
@@ -29,14 +32,14 @@
                 Height="50"
                 HorizontalAlignment="Center"
                 FontSize="30"
-                Margin="15"
+                Margin="15" Foreground="White"
                 />
             <TextBlock
                 Text="Логин"
                 Height="50"
                 HorizontalAlignment="Center"
                 FontSize="25"
-                Margin="10"
+                Margin="10" Foreground="White"
                 />
             <TextBox 
                 x:Name="txtLog"
@@ -45,14 +48,14 @@
                 FontSize="25"
                 HorizontalAlignment="Center"
                 VerticalContentAlignment="Center"
-                TextAlignment="Center"
+                TextAlignment="Center" Background="{x:Null}" Foreground="White"
                      />
             <TextBlock
                 Text="Пароль"
                 Height="50"
                 HorizontalAlignment="Center"
                 FontSize="25"
-                Margin="10"
+                Margin="10" Foreground="White"
                 />
             <TextBox 
                 x:Name="txtPass"
@@ -61,7 +64,7 @@
                 FontSize="25"
                 VerticalContentAlignment="Center"
                 HorizontalAlignment="Center"
-                TextAlignment="Center"
+                TextAlignment="Center" Background="{x:Null}" Foreground="White"
             />
             <Button
                 x:Name="btAuth"
@@ -71,7 +74,7 @@
                 Width="200"
                 Margin="75" 
                 HorizontalAlignment="Center" 
-                Click="btAuth_Click"
+                Click="btAuth_Click" Background="{x:Null}" Foreground="White"
             />
 
         </StackPanel>

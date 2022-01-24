@@ -64,6 +64,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ClassEntities.cs" />
     <Compile Include="EF\BarbyShop.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -80,9 +81,6 @@
       <DependentUpon>BarbyShop.edmx</DependentUpon>
     </Compile>
     <Compile Include="EF\Client.cs">
-      <DependentUpon>BarbyShop.tt</DependentUpon>
-    </Compile>
-    <Compile Include="EF\ClientService.cs">
       <DependentUpon>BarbyShop.tt</DependentUpon>
     </Compile>
     <Compile Include="EF\Employee.cs">
@@ -199,9 +197,6 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Resource Include="Images\cross.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="EF\BarbyShop.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>BarbyShop.Context.cs</LastGenOutput>
@@ -212,6 +207,9 @@
       <DependentUpon>BarbyShop.edmx</DependentUpon>
       <LastGenOutput>BarbyShop.cs</LastGenOutput>
     </Content>
+    <Resource Include="Images\barber2.png" />
+    <Resource Include="Images\cross.png" />
+    <Resource Include="Images\barber1.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
